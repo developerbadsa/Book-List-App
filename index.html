@@ -14,6 +14,10 @@
     </header>
     <main class=" flex flex-col justify-center items-center">
         <div class=" border border-sky-500 rounded-lg p-12">
+          <div id="warningMessage" class="alert alert-error hidden">
+            <svg xmlns="http://www.w3.org/2000/svg" class="stroke-current shrink-0 h-6 w-6" fill="none" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" /></svg>
+            <span>Warning: Please Dont give Empty Fields</span>
+          </div>
             <table class="table mx-auto px-4">
               <!-- head -->
               <thead>
@@ -24,31 +28,23 @@
                   <th>Book Pages</th>
                 </tr>
               </thead>
-              <tbody>
-                <!-- row 1 -->
-                <tr>
-                  <th>1</th>
-                  <td>Cy Ganderton</td>
-                  <td>Quality Control Specialist</td>
-                  <td>Blue</td>
-                </tr>
+              <tbody id="tableRow">
               </tbody>
             </table>
           </div>
           <!-- List input fields -->
           <div class="mt-24">
             <div class="flex flex-col md:flex-row  input-group gap-3 " >
-                <input type="text" placeholder="Your Book Name" class="input input-xs input-info" />
-                <input type="text" placeholder="Book Writter Name" class="input input-xs input-info" />
-                <input type="number" placeholder="Book Page Number" class="input input-xs input-info" />
-                <button class="btn btn-info btn-xs">
+                <input id="name" type="text" placeholder="Your Book Name" class="input input-xs input-info" />
+                <input id="writter" type="text" placeholder="Book Writter Name" class="input input-xs input-info" />
+                <input id="number" type="number" placeholder="Book Page Number" class="input input-xs input-info" />
+                <button id="text-submit" class="btn btn-info btn-xs">
                     <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M256 80c0-17.7-14.3-32-32-32s-32 14.3-32 32V224H48c-17.7 0-32 14.3-32 32s14.3 32 32 32H192V432c0 17.7 14.3 32 32 32s32-14.3 32-32V288H400c17.7 0 32-14.3 32-32s-14.3-32-32-32H256V80z"/></svg>
                 </button>
             </div>
           </div>
     </main>
     <footer>
-
     </footer>
 
     <script src="assets/js/style.js"></script>
