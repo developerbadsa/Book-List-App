@@ -12,13 +12,15 @@ const warningMessage = document.getElementById('warningMessage');
 let i = 1;
 
 inputSubmit.addEventListener('click', function () {
-    let namValue = Boolean(inputName.value);
-    let writeValue = Boolean(inputWriter.value);
-    let numValue = Boolean(inputNumber.value);
+
+    let namValue = inputName.value.trim() !== '';
+    let writeValue = inputWriter.value.trim() !== '';
+    let numValue = inputNumber.value.trim() !== '';
+
+
 
     if( !namValue || !writeValue || !numValue){
         warningMessage.classList.remove('hidden');
-        console.log( namValue)
     }else{
 
         let tableRow = document.createElement('tr');
@@ -28,7 +30,7 @@ inputSubmit.addEventListener('click', function () {
                       <td>${inputWriter.value}</td>
                       <td>${inputNumber.value}</td>
                             `;
-    
+
         tableParent.appendChild(tableRow);
         warningMessage.classList.add('hidden');
 
@@ -36,9 +38,8 @@ inputSubmit.addEventListener('click', function () {
         inputWriter.value = '';
         inputNumber.value = '';
 
-
-
     }
+
 
     i++
 })
