@@ -8,13 +8,13 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="assets/style.css">
 </head>
-<body class="container  h-screen flex items-center">
+<body class="h-screen flex flex-col justify-center items-center">
     <header>
-
+        <h1 class="font-extrabold text-sky-400 text-2xl my-12">Book List App</h1>
     </header>
-    <main class="mx-auto">
-        <div class="">
-            <table class="table mx-auto border-red-400 px-4">
+    <main class=" flex flex-col justify-center items-center">
+        <div class=" border border-sky-500 rounded-lg p-12">
+            <table class="table mx-auto px-4">
               <!-- head -->
               <thead>
                 <tr>
@@ -26,18 +26,25 @@
               </thead>
               <tbody>
                 <!-- row 1 -->
-                <!-- <tr>
+                <tr>
                   <th>1</th>
                   <td>Cy Ganderton</td>
                   <td>Quality Control Specialist</td>
                   <td>Blue</td>
-                </tr> -->
-                <!-- row 2 -->
+                </tr>
               </tbody>
             </table>
           </div>
-          <div>
-            
+          <!-- List input fields -->
+          <div class="mt-24">
+            <div class="flex flex-col md:flex-row  input-group gap-3 " >
+                <input type="text" placeholder="Your Book Name" class="input input-xs input-info" />
+                <input type="text" placeholder="Book Writter Name" class="input input-xs input-info" />
+                <input type="number" placeholder="Book Page Number" class="input input-xs input-info" />
+                <button class="btn btn-info btn-xs">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M256 80c0-17.7-14.3-32-32-32s-32 14.3-32 32V224H48c-17.7 0-32 14.3-32 32s14.3 32 32 32H192V432c0 17.7 14.3 32 32 32s32-14.3 32-32V288H400c17.7 0 32-14.3 32-32s-14.3-32-32-32H256V80z"/></svg>
+                </button>
+            </div>
           </div>
     </main>
     <footer>
